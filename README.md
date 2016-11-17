@@ -55,22 +55,22 @@ In python console, type `%run Pomotask.py` and you'll get two objects to use: `p
 #### Start a work event
 First, call `task.print_tree()` to print the current task_tree, in order to get the task id for the task you are going to take. You will get something like this in your terminal:
 
-![](./fig_tree.png)
+![](./readme_rc/fig_tree.png)
 
 The number before each task is a task id. To specify a certain task, you should join the task ids of all it's parents with a dot `.`. For example, the task id `'1.0.1'` represents the task `/NN/Nielson's book/code network3.py`.
 
 To start a work event for task '1.2', type `pomo.work('1.2')` . A timer will be started in command line,
 
-![](./fig_timer.png) 
+![](./readme_rc/fig_timer.png) 
 
 and you'll get notified after 25 minutes. Two notification types are supported: 
 'buble'(default) and 'popup'. This can be set via the attribute `notif_type` of class `Config`(in file `config.py`). 'buble' notification calls the tool `notify-send`, and 'popup' calls `zenity`. The 'buble' notification looks like:
 
-![](fig_break.png) 
+![](readme_rc/fig_break.png) 
 
 Then have a break and you'll be reminded back to work.
 
-![](fig_work.png)
+![](readme_rc/fig_work.png)
 
 
 <a name="print-statistics"></a>
