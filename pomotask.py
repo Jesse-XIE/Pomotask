@@ -142,7 +142,7 @@ class Task:
         lines.append(' \x1b[1mCurrent task tree\x1b[0m')
         lines.append(' Statistic between\x1b[1m {} 00:00:00 \x1b[0m and \x1b[1m {} 00:00:00\x1b[0m'.format(
             date_range[0], date_range[1]))
-        lines.append(' 1 tomate = 30 min')
+        lines.append(' 1 tomate = {} min'.format(Config.pomodoro_time))
         title = self._tabular_line(
             ['Task', 'Tomates'], [50, 20], ['c', 'c'], bold_list=[True, True])
         title = '\x1b[31;40;1;4m' + title + '\x1b[0m'
@@ -218,7 +218,7 @@ class Task:
         time_range = self._translate_date(date)
         return self.db.query_sum_duration(task, time_range)
 
-    def record(self, task_id, duration=30, comment='', time='now'):
+    def record(self, task_id, duration=Config.pomodoro_time, comment='', time='now'):
         if time == 'now':
             time = str(datetime.datetime.now())
         ids = [int(s) for s in task_id.split('.')]
