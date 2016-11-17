@@ -37,7 +37,7 @@ Different from some other task management tools, Pomotask uses a tasktree to org
     + conference   
 
 - NN
-    + Nielson`s book
+    + Nielson's book
         * derive BP for convnet   
         * code newtowk3.py
     + learn theano
